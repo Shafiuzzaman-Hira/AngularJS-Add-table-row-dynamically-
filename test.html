@@ -1,0 +1,32 @@
+<div ng-app="testModule">
+  <div ng-controller="testController as testModel">
+
+    <button ng-click="testModel.addfield()" class="btn btn-sm btn-info col-sm-offset-5 col-sm-2" title="Add a product">Add
+    </button>
+
+    <table class="table table-hover table-fixedheader">
+      <thead>
+        <tr>
+          <th class="col-sm-6">Name</th>
+          <th class="col-sm-3">Profession</th>
+          <th class="col-sm-2">Company</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="item in testModel.inputs">
+
+          <td>
+            {{testModel.name}}
+          </td>
+          <td>
+            {{testModel.profession}}
+          </td>
+          <td>
+            {{testModel.company}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
